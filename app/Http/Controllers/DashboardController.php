@@ -74,6 +74,14 @@ class DashboardController extends Controller
     }
 
     public function deleteUser(string $id){
-
+        $accessToken = Session::get('api_token');
+        try{
+            Http::withHeaders([
+                'Authorization' => 'Bearer ' . $accessToken
+            ])->get('http://127.0.0.1:8000/api/deleteUser/' . $id);
+        }catch(Exceptions $e){
+            dd($e);
+        }
+        return redirect()->route('user');
     }
 }

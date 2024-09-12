@@ -20,7 +20,7 @@
                         <th>Email</th>
                         <th>Refresh Count</th>
                         <th>Peran</th>
-                        <!-- <th>Aksi</th> -->
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -29,7 +29,7 @@
                         <th>Email</th>
                         <th>Refresh Count</th>
                         <th>Peran</th>
-                        <!-- <th>Aksi</th> -->
+                        <th>Aksi</th>
                     </tr>
                 </tfoot>
             </table>
