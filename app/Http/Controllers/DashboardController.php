@@ -12,7 +12,7 @@ class DashboardController extends Controller
 {
     public function index(){
         $user = Session::get('user');
-        return view('dashboard.index', compact('user'));
+        return view('dashboard.tableau', compact('user'));
     }
 
     public function user(){
