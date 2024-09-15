@@ -10,6 +10,10 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
+        $user = Session::get('user');
+        if($user != null)
+            return redirect()->route('dashboard');
+
         return view('auth.login'); // menampilkan view form login
     }
 
@@ -56,6 +60,8 @@ class AuthController extends Controller
             // jika berhasil, hapus token dari session
             Session::forget('api_token');
             Session::forget('refresh_token');
+            Session::forget('user');
+
             return redirect()->route('login');
         } else {
             // jika gagal, tampilkan pesan error
